@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 30, 30, 30;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Markdown styling */
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+.prose h1 {
+  font-size: 2em;
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
+  padding-bottom: 0.3em;
+}
+
+.prose h2 {
+  font-size: 1.5em;
+  border-bottom: 1px solid rgba(var(--foreground-rgb), 0.1);
+  padding-bottom: 0.2em;
+}
+
+.prose h3 {
+  font-size: 1.25em;
+}
+
+.prose p {
+  margin-bottom: 1em;
+}
+
+.prose ul, .prose ol {
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.highlight-yellow {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+.highlight-green {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.highlight-blue {
+  background-color: rgba(0, 0, 255, 0.3);
+}
+
+.highlight-pink {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+.underline-red {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 0, 0, 0.7);
+  text-decoration-thickness: 2px;
+}
+
+.underline-blue {
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 255, 0.7);
+  text-decoration-thickness: 2px;
+}
+
+.underline-green {
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 128, 0, 0.7);
+  text-decoration-thickness: 2px;
+}
+
+.underline-orange {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 165, 0, 0.7);
+  text-decoration-thickness: 2px;
+}
