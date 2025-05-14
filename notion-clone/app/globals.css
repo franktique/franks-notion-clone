@@ -88,3 +88,74 @@ body {
   text-decoration-color: rgba(255, 165, 0, 0.7);
   text-decoration-thickness: 2px;
 }
+
+/* Enable text selection globally */
+* {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+}
+
+/* Exception for UI elements where selection shouldn't be enabled */
+button, .sidebar, h1, h2, h3, h4, h5, h6 {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+
+/* Explicitly enable selection for content areas */
+.prose, textarea, .pdf-page-content, .user-select-text {
+  user-select: text !important;
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  cursor: text !important;
+}
+
+/* PDF specific styles */
+.pdf-page-content {
+  padding: 1rem;
+  border: 1px solid rgba(var(--foreground-rgb), 0.1);
+  border-radius: 0.5rem;
+  background-color: rgba(var(--foreground-rgb), 0.02);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  white-space: pre-wrap;
+}
+
+.pdf-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(var(--foreground-rgb), 0.1);
+  margin-top: 1rem;
+}
+
+.pdf-pagination button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: transparent;
+  transition: background-color 0.2s;
+}
+
+.pdf-pagination button:hover:not(:disabled) {
+  background-color: rgba(var(--foreground-rgb), 0.1);
+}
+
+.pdf-pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pdf-pagination-info {
+  margin: 0 1rem;
+  font-size: 0.875rem;
+}
